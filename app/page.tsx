@@ -6,9 +6,7 @@ export default function Home() {
     <>
       <h1>Hi Mom!</h1>
       <p>This page is static. It was built on 06/09/2023.</p>
-      <p>
-        <a href="/ssr">View a server-side rendered page.</a>
-      </p>
+      <p>Adding a new commit to test if it updates</p>
     </>
   );
 }
