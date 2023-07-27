@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import { GetStaticProps } from 'next'
+
+import Layout, { siteTitle } from '../components/Layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
-import Date from '../components/date'
-import { GetStaticProps } from 'next'
+import Date from '../components/Date'
 
 export default function Home({
   allPostsData
@@ -16,7 +17,7 @@ export default function Home({
   }[]
 }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
