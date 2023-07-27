@@ -1,9 +1,11 @@
 import Layout from "../components/Layout";
 
-export default function Projects() {
+export default function Blog() {
     return (
         <Layout>
-            <div>Hi blog</div>
+            <div style={{ marginTop: "2rem" }}>
+                The Blog page is currently under construction, check back in a bit.
+            </div>
         </Layout>
     )
 }
