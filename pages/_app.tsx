@@ -1,6 +1,16 @@
-import '../styles/globals.css'
+import Head from 'next/head'
 import { AppProps } from 'next/app'
 
+import '../styles/globals.css'
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png"/>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
