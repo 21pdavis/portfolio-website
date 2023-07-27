@@ -1,4 +1,5 @@
 .container {
+  min-width: 32.5rem;
   padding: 0 0.5rem;
   margin-top: 2rem;
   display: flex;
@@ -16,7 +17,7 @@
 
 .border-circle {
   border-radius: 50%;
-  width: 17.5rem;
+  width: 30vw;
   height: auto;
 }
 
@@ -39,4 +40,13 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+}
+
+@media (max-width: 585px) {
+  .bio-container h1 {
+    font-size: 28px;
+  }
+  .bio-container p {
+    font-size: 14px;
+  }
 }
