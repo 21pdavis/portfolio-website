@@ -21,6 +21,7 @@
     .navbar-container {
         padding: 0.5rem;
         flex-direction: column;
+        min-width: 20rem;
     }
 
     .navbar-container > a {
