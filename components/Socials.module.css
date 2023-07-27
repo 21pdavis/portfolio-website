@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    width: 20rem;
+    width: 21vw;
     flex-direction: row;
     justify-content: space-between;
 }

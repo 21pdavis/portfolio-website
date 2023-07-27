@@ -1,8 +1,10 @@
 .navbar-container {
+    min-width: 32.5rem;
     background-color: #1D3557;
     border-radius: 20px;
     padding: 1rem;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .navbar-container > a {
