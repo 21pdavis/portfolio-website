@@ -1,7 +1,7 @@
 .navbar-container {
     background-color: #1D3557;
     border-radius: 20px;
-    padding: 2vw;
+    padding: 1vw 2vw;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -19,6 +19,6 @@
 
 @media (max-width: 768px) {
     .navbar-container {
-        padding: 1vw;
+        padding: 0.5vw 1vw;
     }
 }
