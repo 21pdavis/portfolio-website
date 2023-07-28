@@ -1,23 +1,23 @@
 .container {
-  min-width: 32.5rem;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .header {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .border-circle {
   border-radius: 50%;
-  width: 30vw;
-  height: auto;
+  width: 15rem;
+  height: 15rem;
 }
 
 .bio-container {
@@ -28,24 +28,20 @@
 
 .bio-container h1 {
   text-align: left;
-  font-size: 3vw;
   font-weight: 600;
   margin: 0;
 }
 
 .bio-container p {
   text-align: left;
-  font-size: 1.5vw;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
 }
 
-/* @media (max-width: 585px) {
-  .bio-container h1 {
-    font-size: 28px;
+@media (max-width: 768px) {
+  .border-circle {
+    width: 10rem;
+    height: 10rem;
   }
-  .bio-container p {
-    font-size: 14px;
-  }
-} */
+}
