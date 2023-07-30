@@ -7,6 +7,9 @@ import Socials from '../components/Socials'
 
 import styles from '../styles/Home.module.css'
 
+//! temp
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <Layout>
@@ -33,6 +36,9 @@ export default function Home() {
               I'm an Honors Computer Science and Mathematics student at UMass Amherst looking to jump-start a career in game development.
               <br /> <br />
               Welcome to my Portfolio! Take a look around.
+
+              <br />
+              <Link href="/webglTest">WebGL Test</Link>
             </p>
             <div style={{marginTop: "1rem"}}>
               <Socials />
