@@ -10,11 +10,13 @@ export default function WebGLTest() {
             codeUrl: "/WebGLBuild/Build/WebGLBuild.wasm"
         }
     );
-    
+
     return (
-        <Unity
-            style={{aspectRatio: "16:9", width: "100%", height: "auto"}}
-            unityProvider={unityProvider}
-        />
+        <Layout>
+            <Unity
+                style={{ aspectRatio: "16:9", width: "100%", height: "auto" }}
+                unityProvider={unityProvider}
+            />
+        </Layout>
     )
 }
