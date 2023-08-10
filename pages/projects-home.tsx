@@ -13,12 +13,7 @@ export default function Projects() {
   return (
     <Layout>
       <div style={{ marginTop: "2rem" }}>
-        <ProjectCard
-          projectKey="testKey"
-          projectTitle={mockData.testKey.projectTitle}
-          projectDescription={mockData.testKey.projectDescription}
-          projectImage={mockData.testKey.projectImage}
-        />
+        <ProjectCard projectKey="stormyCastle"/>
       </div>
     </Layout>
   )

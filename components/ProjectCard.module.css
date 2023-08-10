@@ -5,9 +5,13 @@
     padding: 1vw 2vw;
     aspect-ratio: 19/9;
     width: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .container > p {
+    color: #fff;
     font-size: 1.5vw;
     margin: 0.5vw 0;
 }
