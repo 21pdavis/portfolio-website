@@ -1,0 +1,13 @@
+.container {
+    display: inline-block;
+    border-radius: 20px;
+    /* TOOD: better calc based padding here */
+    padding: 1vw 2vw;
+    aspect-ratio: 19/9;
+    width: 30vw;
+}
+
+.container > p {
+    font-size: 1.5vw;
+    margin: 0.5vw 0;
+}

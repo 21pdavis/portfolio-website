@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ProjectCard({ projectKey }) {
-    return (
-        <Link href={`/projects/${projectKey}`}>
-            Test
-        </Link>
-    )
+import styles from './ProjectCard.module.css'
+
+export default function ProjectCard({ projectKey, projectTitle, projectDescription, projectImage }) {
+  return (
+    <div className={styles.container} style={{ backgroundImage: `url(${projectImage}) no-repeat` }}>
+      <p>
+        <span className={styles.title}>{projectTitle}</span>
+        <br />
+        <span className={styles.description}>{projectDescription}</span>
+      </p>
+    </div>
+  )
 }
