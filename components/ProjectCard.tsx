@@ -35,11 +35,13 @@ export default function ProjectCard({ projectKey }: ProjectCardProps) {
 
   return (
     <div className={styles.container} style={{ backgroundImage: `url(${projectImage})` }}>
-      <p>
-        <span className={styles.title}>{projectTitle}</span>
-        <br />
-        <span className={styles.description}>{projectDescription}</span>
-      </p>
+      <div className={styles.overlay}>
+        <p>
+          <span className={styles.title}>{projectTitle}</span>
+          <br />
+          <span className={styles.description}>{projectDescription}</span>
+        </p>  
+      </div>
     </div>
   )
 }
