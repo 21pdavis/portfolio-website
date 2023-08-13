@@ -6,9 +6,9 @@ export default function Navbar() {
     return (
         <div className={styles["navbar-container"]}>
             <Link href="/">Home</Link>
-            <Link href="/projectsHome">Projects</Link>
+            <Link href="/projects-home">Projects</Link>
             <Link href="/about">About Me</Link>
-            <Link href="/blogHome">Blog</Link>
+            <Link href="/blog-home">Blog</Link>
         </div>
     );
 }
