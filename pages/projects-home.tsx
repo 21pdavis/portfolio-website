@@ -1,7 +1,10 @@
+import Head from "next/head";
+
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-
 import { getAllEntries } from "../utils/contentful-api-utils";
+
+import styles from '../styles/ProjectsHome.module.css';
 
 interface Entry {
   title: string;
@@ -35,11 +38,18 @@ export async function getServerSideProps() {
 
 type ProjectsProps = { entries: Entry[] };
 export default function Projects({ entries }: ProjectsProps) {
-  return entries.map(entry => (
+  return (
     <Layout>
-      <div style={{ marginTop: "2rem" }}>
-        <ProjectCard title={entry.title} description={entry.description} backgroundImage={entry.backgroundImage} />
+      <Head>
+        <title>My Projects</title>
+      </Head>
+      <div className={styles.container}>
+        {
+          entries.map(entry => (
+            <ProjectCard title={entry.title} description={entry.description} backgroundImage={entry.backgroundImage} />
+          ))
+        }
       </div>
     </Layout>
-  ))
+  )
 }
