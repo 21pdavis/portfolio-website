@@ -6,12 +6,12 @@ import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ContextProvider>
+    <>
       <Head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png"/>
       </Head>
-      <Component {...pageProps} />
-    </ ContextProvider>
+      <Component {...pageProps} /> 
+    </>
   )
 }
