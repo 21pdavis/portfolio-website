@@ -10,7 +10,7 @@ interface Entry {
   title: string;
   description: string;
   backgroundImage: string;
-  key: string;
+  projectKey: string;
 }
 
 function mapEntry(entry: any) {
@@ -18,7 +18,7 @@ function mapEntry(entry: any) {
     title: entry.fields.title as string,
     description: entry.fields.description as string,
     backgroundImage: (entry.fields.backgroundImage as any).fields.file.url as string,
-    key: entry.fields.key as string,
+    projectKey: entry.fields.key as string,
   };
 }
 
@@ -44,8 +44,14 @@ export default function Projects({ entries }: ProjectsProps) {
       </Head>
       <div className={styles.container}>
         {
-          entries.map(entry => (
-            <ProjectCard title={entry.title} description={entry.description} backgroundImage={entry.backgroundImage} />
+          entries.map((entry: Entry) => (
+            <ProjectCard
+              title={entry.title}
+              description={entry.description}
+              backgroundImage={entry.backgroundImage}
+              projectKey={entry.projectKey}
+              key={`project-card-${entry.projectKey}`}
+            />
           ))
         }
       </div>
