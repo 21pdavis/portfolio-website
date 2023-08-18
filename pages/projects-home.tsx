@@ -24,7 +24,6 @@ function mapEntry(entry: any) {
 
 export async function getServerSideProps() {
   const entries = await getAllEntries();
-  console.log(`entries are ${JSON.stringify(entries, null, 2)}`);
 
   // extract the url for the background image
   const mappedEntries: Entry[] = entries.map(entry => mapEntry(entry));
