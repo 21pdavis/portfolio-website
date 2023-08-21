@@ -38,10 +38,20 @@
 
 .overlay:hover > p {
     color: #fff;
-    font-size: 1.5vw;
 }
 
 .overlay:hover > h2 {
     color: #fff;
-    font-size: 2vw;
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .overlay > p {
+        font-size: 3vw;
+    }
+    .overlay > h2 {
+        font-size: 4vw;
+    }
 }
