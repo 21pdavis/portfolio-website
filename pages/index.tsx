@@ -17,14 +17,18 @@ export default function Home() {
       {/* Info banner at top of page with profile picture, bio, and socials links */}
       <section className={styles.container}>
         <div className={styles.header}>
-          <Image
-            priority
-            src="/images/profile_picture.png"
-            className={styles["border-circle"]}
-            width={500}
-            height={500}
-            alt="Profle Picture"
-          />
+          <div>
+            <Image
+              priority
+              src="/images/profile_picture.png"
+              className={styles["border-circle"]}
+              layout="responsive"
+              width={500}
+              height={500}
+              alt="Profle Picture"
+              style={{aspectRatio: "1/1"}}
+            />  
+          </div>
           <div className={styles["bio-container"]}>
             <h1>
               Paul Davis

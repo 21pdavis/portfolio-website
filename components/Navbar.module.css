@@ -11,14 +11,26 @@
 
 .navbar-container > a {
     color: #F7F7F7;
-    font-size: 2vw;
+    font-size: 28px;
     font-weight: bold;
     text-decoration: none;
     margin: 0 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .navbar-container > a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 369px) {
+    .navbar-container > a {
+        font-size: 10px;
+    }
+}
+
+/* @media (max-width: 768px) {
     .navbar-container {
         padding: 0.5vw 1vw;
     }
-}
+} */
