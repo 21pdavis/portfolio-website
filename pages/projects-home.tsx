@@ -37,6 +37,18 @@ export async function getServerSideProps() {
 
 type ProjectsProps = { entries: Entry[] };
 export default function Projects({ entries }: ProjectsProps) {
+  const projectCardFromEntry = (entry: Entry) => {
+    return (
+      <ProjectCard
+        title={entry.title}
+        description={entry.description}
+        backgroundImage={entry.backgroundImage}
+        projectKey={entry.projectKey}
+        key={`project-card-${entry.projectKey}`}
+      />
+    )
+  }
+  
   return (
     <Layout>
       <Head>
@@ -44,15 +56,7 @@ export default function Projects({ entries }: ProjectsProps) {
       </Head>
       <div className={styles.container}>
         {
-          entries.map((entry: Entry) => (
-            <ProjectCard
-              title={entry.title}
-              description={entry.description}
-              backgroundImage={entry.backgroundImage}
-              projectKey={entry.projectKey}
-              key={`project-card-${entry.projectKey}`}
-            />
-          ))
+          entries.map((entry: Entry) => projectCardFromEntry(entry))
         }
       </div>
     </Layout>

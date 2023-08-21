@@ -1,11 +1,12 @@
 .container {
-    display: inline-block;
+    flex-wrap: wrap;
     border-radius: 20px;
     aspect-ratio: 19/9;
-    width: 47.5%;
+    width: 49%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 1.5vw;
 }
 
 .overlay {

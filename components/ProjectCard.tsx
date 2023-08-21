@@ -7,6 +7,7 @@ type ProjectCardProps = {
   description: string,
   backgroundImage: string
   projectKey: string
+  style?: React.CSSProperties
 }
 
 export default function ProjectCard({
