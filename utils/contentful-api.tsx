@@ -10,7 +10,7 @@ const contentTypeIDs: string[] = [];
 async function getAllContentTypes(): Promise<ContentTypeCollection> {
   try {
     const contentTypeInfo = await client.getContentTypes();
-    console.log(`content types are: ${JSON.stringify(contentTypeInfo, null, 2)}`)
+    // console.log(`content types are: ${JSON.stringify(contentTypeInfo, null, 2)}`)
     
     // update local content type IDs
     const ids = contentTypeInfo.items.map(item => item.sys.id);
