@@ -1,4 +1,4 @@
-import { ContentType, ContentTypeCollection, createClient } from 'contentful';
+import { createClient } from 'contentful';
 
 // init contentful client with env keys
 const client = createClient({
@@ -6,25 +6,7 @@ const client = createClient({
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
 });
 
-const contentTypeIDs: string[] = [];
-async function getAllContentTypes(): Promise<ContentTypeCollection> {
-  try {
-    const contentTypeInfo = await client.getContentTypes();
-    // console.log(`content types are: ${JSON.stringify(contentTypeInfo, null, 2)}`)
-    
-    // update local content type IDs
-    const ids = contentTypeInfo.items.map(item => item.sys.id);
-    contentTypeIDs.push(...ids);
-    
-    return contentTypeInfo;
-  }
-  catch (error) {
-    console.log(error);
-  }
-}
-
-// init content types
-getAllContentTypes();
+type ContentfulKey = "projectPage" | "projectCard";
 
 export async function getAllEntries() {
     try {
@@ -36,11 +18,7 @@ export async function getAllEntries() {
     }
 }
 
-export async function getEntryByKeyAndType(key: string, type: string) {
-    if (!contentTypeIDs.includes(type)) {
-      throw new Error(`Content type ${type} is not valid`);
-    }
-  
+export async function getEntryByKeyAndType(key: string, type: ContentfulKey) {
     try {
       const entry = await client.getEntries({
         content_type: type,
