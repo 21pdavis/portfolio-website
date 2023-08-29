@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-import { getAllEntries } from "../utils/contentful-api-utils";
+import { getAllEntries } from "../utils/contentful-api";
 
 import styles from '../styles/ProjectsHome.module.css';
 
