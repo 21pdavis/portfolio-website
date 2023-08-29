@@ -15,7 +15,6 @@ export default function ProjectCard({
   backgroundImage,
   projectKey
 }: ProjectCardProps) {
-  console.log(`key: ${projectKey}`)
   return (
     <div className={styles.container} style={{ backgroundImage: `url(${backgroundImage})` }}>
       <Link href={`/projects/${projectKey}`} style={{ textDecoration: "none" }}>

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 
 export async function getServerSideProps(context) {
-  const { key } = context.query; // slug will be Contentful key?
+  const { key } = context.query; // slug will be Contentful key
 
   // TODO: data
 
